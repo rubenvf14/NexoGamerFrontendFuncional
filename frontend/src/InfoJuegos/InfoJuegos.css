@@ -1,0 +1,316 @@
+.generalContainer2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-family: Kanit;
+}
+
+.information1 img{
+    margin-top: 300px;
+    width: 100%;
+}
+
+.information1{
+    width: 40%;
+}
+
+.information2{
+    margin-top: 240px;
+    margin-left: 30px;
+    width: 50%;
+}
+
+.moreInformation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedorImagen img{
+    border-radius: 10px;
+}
+
+h2{
+    text-align: center;
+    margin: none;
+}
+
+p{
+    margin-top: 0;
+    text-align: justify;
+}
+
+.centrado{
+    text-align: center;
+}
+
+.nombre2, .precio2{
+    margin-top: 0;
+}
+
+/*Etiqueta naranja*/
+
+.contenedorImagen {
+    position: relative; /* Asegura que la posición de la etiqueta sea relativa a este contenedor */
+    display: inline-block; /* Para que el contenedor se ajuste al tamaño de la imagen */
+  }
+  
+  .etiquetaNaranja2 {
+    position: absolute;
+    width: 70px;
+    text-align: center;
+    bottom: 4px; /* Coloca la etiqueta en la parte inferior */
+    left: 0; /* Coloca la etiqueta en la parte izquierda */
+    background-color: #FF5400; /* Color de fondo de la etiqueta */
+    padding: 5px; /* Ajusta el relleno según sea necesario */
+    color: white; /* Color del texto */
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .companias-container, .plataformas-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.compania-item, .plataformas-item {
+    margin-bottom: 5px; /* Ajusta el valor según el espaciado deseado */
+}
+
+.estrellas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Añadir comentarios*/
+
+.añadirComentario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.comentarioFinal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comentarioAñadido{
+    width: 90%;
+    height: 200px;
+    font-size: 11pt;
+    background-color: #1D1D1D;
+    border: 1px solid #1D1D1D;
+    border-radius: 10px;
+    color: white;
+    font-family: Kanit;
+    padding: 10px;
+    resize: none; /* Evita que el usuario pueda redimensionar el área de texto */
+  }
+
+.exito{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13pt;
+    font-family: Kanit;
+}
+
+.paper-plane{
+    margin-left: 20px;
+    font-size: 30pt;
+    cursor: pointer;
+}
+
+/*Pie de página*/
+
+.footer{
+    margin-top: 50px;
+}
+
+/*Animaciones al enviar los comentarios*/
+
+.information2.fadeOut {
+    animation-name: fadeOut;
+  }
+  
+  .information2.fadeIn {
+    animation-name: fadeIn;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fadeOut {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: fadeOut;
+  }
+  
+  .fadeIn {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+  }
+
+  /*Animaciones y estilos del check verde y el círculo si el servidor envía un status 200 al enviar los comentarios*/
+  
+  @keyframes drawCheck {
+    0% {
+      stroke-dashoffset: 69;
+      stroke-width: 0;
+    }
+    50% {
+      stroke-width: 2;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes drawTick {
+    0% {
+      stroke-dashoffset: 24;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .exito svg circle {
+    animation: drawCheck 1.5s ease-in-out forwards;
+    stroke-dasharray: 69;
+    stroke-dashoffset: 69;
+  }
+  
+  .exito svg path,
+  .exito svg polyline {
+    animation: drawTick 1.5s ease-in-out forwards;
+    stroke-dasharray: 24;
+    stroke-dashoffset: 24;
+  }
+
+  @keyframes drawError {
+    0% {
+      stroke-dashoffset: 76;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes drawErrorCross {
+    0% {
+      stroke-dashoffset: 48;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .error svg circle {
+    animation: drawError 1.5s ease-in-out forwards;
+    stroke-dasharray: 76;
+    stroke-dashoffset: 76;
+    stroke: #FF0000; /* Color rojo */
+  }
+  
+  .error svg path {
+    animation: drawErrorCross 1.5s ease-in-out forwards;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    stroke: #FFFFFF; /* Color blanco */
+  }
+  
+  /*Mensaje de error*/
+
+  .error {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13pt;
+    font-family: Kanit;
+    animation-name: drawError; /* Agregar esta línea */
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.error.fadeOut {
+    animation-name: fadeOut;
+  }
+  
+  .error.fadeIn {
+    animation-name: fadeIn;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+/*Animación para las barras de la cruz del error*/
+  
+@keyframes drawSlash1 {
+    0% {
+      stroke-dasharray: 0, 20; /* Inicia sin longitud */
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dasharray: 20, 0; /* Termina con la longitud completa */
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes drawSlash2 {
+    0% {
+      stroke-dasharray: 0, 20; /* Inicia sin longitud */
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dasharray: 20, 0; /* Termina con la longitud completa */
+      stroke-dashoffset: 0;
+    }
+  }
