@@ -1,0 +1,213 @@
+video{
+  height: 100vh;
+}
+
+.videoDerecha{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cabeceraRegister{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+}
+
+/* Estilos del texto */
+.cabeceraRegister h1 {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  font-family: Kanit;
+  font-size: 30pt;
+  margin-bottom: 22px;
+}
+
+/* Estilo de la línea */
+.cabeceraRegister h1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 0;
+  height: 5px;
+  background-color: white;
+  transition: width 0.3s;
+  transform: translateX(-50%);
+}
+
+/* Animación al pasar el ratón */
+.cabeceraRegister h1:hover::after {
+  width: 100%;
+}
+
+.cabeceraRegister img{
+  transition: transform 1s ease;
+  margin: 10px;
+}
+
+.cabeceraRegister img:hover{
+  animation: moverIcono 1s ease;
+  box-shadow: 0 0 10px white;
+  border-radius: 60%;
+}
+
+@keyframes moverIcono{
+  from{
+    transform: rotateX(0deg);
+  }
+  to{
+    transform: rotateX(360deg);
+  }
+}
+
+.muted, .no-muted{
+  color: white;
+  font-size: 22pt;
+  position: absolute;
+  margin-right: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.formularioRegistro{
+  width: 500px;
+  height: 600px;
+  background-color: white;
+  margin-top: 25vh;
+  margin-right: 250px;
+  border-radius: 15px;
+  font-family: Kanit;
+}
+
+.formularioLogin{
+  width: 500px;
+  height: 450px;
+  background-color: white;
+  margin-top: 30vh;
+  margin-right: 250px;
+  border-radius: 15px;
+  font-family: Kanit;
+}
+
+.registroForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  height: 350px;
+}
+
+.loginForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  height: 200px;
+}
+
+label{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14pt;
+}
+
+.campo{
+  text-align: center;
+  border-radius: 15px;
+  padding-left: 10px;
+  height: 20px;
+  border: 2px solid black;
+}
+
+h1{
+  text-align: center;
+  font-size: 30pt;
+  text-decoration: underline solid black;
+}
+
+.submitRegister{
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  width: 70px;
+  cursor: pointer;
+}
+
+.submitLogin{
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+  width: 70px;
+  margin-top: 50px;
+}
+
+p{
+  margin-top: 60px;
+  text-align: center;
+}
+
+/*Animaciones y estilos para las respuestas de los formularios*/
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: green;
+  margin-bottom: 10px; /* Ajusta este valor según tu preferencia */
+}
+
+.check {
+  width: 0;
+  height: 0;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  opacity: 0;
+  animation: drawCheck 1s forwards;
+  transform-origin: bottom right;
+}
+
+@keyframes drawCheck {
+  0% {
+      width: 0;
+      height: 0;
+      border-right: none;
+      border-bottom: none;
+  }
+  50% {
+      width: 15px; /* Ajusta el ancho final */
+      height: 30px; /* Ajusta la altura final */
+      border-right: 5px solid white;
+      border-bottom: 5px solid white;
+  }
+  100% {
+      width: 30px; /* Ajusta el ancho final */
+      height: 60px; /* Ajusta la altura final */
+      border-right: 5px solid white;
+      border-bottom: 5px solid white;
+      opacity: 1;
+      transform: translate(-50%, -50%) rotate(45deg); /* Agrega rotación */
+  }
+}
+
+.sendInformation{
+  font-family: Kanit;
+  text-align: center;
+}
+
+/*Cambiar el color de los links a azul*/
+
+.cambiarAzul{
+  color: blue;
+}
