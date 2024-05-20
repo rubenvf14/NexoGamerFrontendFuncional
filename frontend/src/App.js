@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Inicio from './Cabecera/Cabecera';
+import JuegosNombre from './JuegosNombre/JuegosNombre';
+import Login from './Login_Register/Login';
+import Register from './Login_Register/Register';
+import Carrito from './Carrito/Carrito';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="NexoGamer">
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Inicio></Inicio>}></Route>
+          <Route path="/inicio" element={<Inicio></Inicio>}></Route>
+          <Route path="juegosNombre/:juego" element={<JuegosNombre></JuegosNombre>}></Route>
+          <Route path='login' element={<Login></Login>}></Route>
+          <Route path='register' element={<Register></Register>}></Route>
+          <Route path='carrito' element={<Carrito></Carrito>}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
